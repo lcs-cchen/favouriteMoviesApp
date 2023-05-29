@@ -12,6 +12,7 @@
 		6E8CA03C2A224FAF0006F3FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E8CA03B2A224FAF0006F3FB /* Preview Assets.xcassets */; };
 		6E8CA0452A22537A0006F3FB /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CA0442A22537A0006F3FB /* MovieListView.swift */; };
 		6E8CA0472A2254470006F3FB /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E8CA0462A2254470006F3FB /* db.sqlite */; };
+		6E8CA0492A2254760006F3FB /* MovieItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CA0482A2254760006F3FB /* MovieItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		6E8CA03B2A224FAF0006F3FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E8CA0442A22537A0006F3FB /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		6E8CA0462A2254470006F3FB /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		6E8CA0482A2254760006F3FB /* MovieItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		6E8CA0422A224FE60006F3FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6E8CA0482A2254760006F3FB /* MovieItemView.swift */,
 				6E8CA0442A22537A0006F3FB /* MovieListView.swift */,
 			);
 			path = Views;
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8CA0492A2254760006F3FB /* MovieItemView.swift in Sources */,
 				6E8CA0352A224FAE0006F3FB /* favouriteMoviesAppApp.swift in Sources */,
 				6E8CA0452A22537A0006F3FB /* MovieListView.swift in Sources */,
 			);

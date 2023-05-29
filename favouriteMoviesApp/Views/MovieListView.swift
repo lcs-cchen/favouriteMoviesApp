@@ -9,7 +9,14 @@ import SwiftUI
 
 struct MovieListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            List{
+                MovieItemView(name: "E.T. the Extra-Terrestial", genre: "Science Fiction", rating: 4)
+                MovieItemView(name: "Ferris Beullir's Day Off", genre: "Comedy", rating: 4)
+                MovieItemView(name: "Ghostbusters", genre: "Comedy", rating: 5)
+            }
+            .navigationTitle("Favorite Movie")
+        }
     }
 }
 
