@@ -38,10 +38,19 @@ struct AddMovieView: View {
             .toolbar{
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: {
-                        Task{
-                            try await db!.transaction {
-                                core in
-                                try core.query("""
+                      AddMovie()
+                    }, label:{ Text("Add")
+                        
+                    })
+                }
+            }
+        }
+    }
+    func AddMovie() {
+        Task{
+            try await db!.transaction {
+                core in
+                try core.query("""
 INSERT INTO MOVIE(
 name,
 genre,
@@ -53,15 +62,9 @@ VALUES (
 (?)
 )
 """,
-                                name,
-                                genre,
-                                rating)
-                            }
-                        }
-                    }, label:{ Text("Add")
-                        
-                    })
-                }
+                name,
+                genre,
+                rating)
             }
         }
     }
