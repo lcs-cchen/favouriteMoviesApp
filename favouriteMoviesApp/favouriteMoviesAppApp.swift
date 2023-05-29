@@ -12,6 +12,7 @@ struct favouriteMoviesAppApp: App {
     var body: some Scene {
         WindowGroup {
             MovieListView()
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 }
