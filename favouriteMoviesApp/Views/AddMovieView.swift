@@ -4,10 +4,12 @@
 //
 //  Created by Cyrus Chen on 28/5/2023.
 //
-
+import Blackbird
 import SwiftUI
 
 struct AddMovieView: View {
+    
+    @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
     
     @State var name = ""
     @State var genre = ""
@@ -33,6 +35,34 @@ struct AddMovieView: View {
                 Spacer()
             }
             .padding(5)
+            .toolbar{
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        Task{
+                            try await db!.transaction {
+                                core in
+                                try core.query("""
+INSERT INTO MOVIE(
+name,
+genre,
+rating
+)
+VALUES (
+(?),
+(?),
+(?)
+)
+""",
+                                name,
+                                genre,
+                                rating)
+                            }
+                        }
+                    }, label:{ Text("Add")
+                        
+                    })
+                }
+            }
         }
     }
 }
@@ -40,5 +70,6 @@ struct AddMovieView: View {
 struct AddMovieView_Previews: PreviewProvider {
     static var previews: some View {
         AddMovieView()
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
     }
 }
