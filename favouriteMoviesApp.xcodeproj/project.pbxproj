@@ -13,6 +13,8 @@
 		6E8CA0452A22537A0006F3FB /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CA0442A22537A0006F3FB /* MovieListView.swift */; };
 		6E8CA0472A2254470006F3FB /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E8CA0462A2254470006F3FB /* db.sqlite */; };
 		6E8CA0492A2254760006F3FB /* MovieItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CA0482A2254760006F3FB /* MovieItemView.swift */; };
+		6EB563AB2A242C2500263B4B /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 6EB563AA2A242C2500263B4B /* Blackbird */; };
+		6EB563AE2A242C4C00263B4B /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB563AD2A242C4C00263B4B /* AppDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,7 @@
 		6E8CA0442A22537A0006F3FB /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		6E8CA0462A2254470006F3FB /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		6E8CA0482A2254760006F3FB /* MovieItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemView.swift; sourceTree = "<group>"; };
+		6EB563AD2A242C4C00263B4B /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB563AB2A242C2500263B4B /* Blackbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 			children = (
 				6E8CA0342A224FAE0006F3FB /* favouriteMoviesAppApp.swift */,
 				6E8CA0432A224FEC0006F3FB /* Models */,
+				6EB563AC2A242C3100263B4B /* Helpers */,
 				6E8CA0422A224FE60006F3FB /* Views */,
 				6E8CA0382A224FAF0006F3FB /* Assets.xcassets */,
 				6E8CA03A2A224FAF0006F3FB /* Preview Content */,
@@ -89,6 +94,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6EB563AC2A242C3100263B4B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6EB563AD2A242C4C00263B4B /* AppDatabase.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +118,9 @@
 			dependencies = (
 			);
 			name = favouriteMoviesApp;
+			packageProductDependencies = (
+				6EB563AA2A242C2500263B4B /* Blackbird */,
+			);
 			productName = favouriteMoviesApp;
 			productReference = 6E8CA0312A224FAE0006F3FB /* favouriteMoviesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +149,9 @@
 				Base,
 			);
 			mainGroup = 6E8CA0282A224FAE0006F3FB;
+			packageReferences = (
+				6EB563A92A242C2500263B4B /* XCRemoteSwiftPackageReference "Blackbird" */,
+			);
 			productRefGroup = 6E8CA0322A224FAE0006F3FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,6 +181,7 @@
 			files = (
 				6E8CA0492A2254760006F3FB /* MovieItemView.swift in Sources */,
 				6E8CA0352A224FAE0006F3FB /* favouriteMoviesAppApp.swift in Sources */,
+				6EB563AE2A242C4C00263B4B /* AppDatabase.swift in Sources */,
 				6E8CA0452A22537A0006F3FB /* MovieListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +383,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6EB563A92A242C2500263B4B /* XCRemoteSwiftPackageReference "Blackbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcoarment/Blackbird";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6EB563AA2A242C2500263B4B /* Blackbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EB563A92A242C2500263B4B /* XCRemoteSwiftPackageReference "Blackbird" */;
+			productName = Blackbird;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E8CA0292A224FAE0006F3FB /* Project object */;
 }
